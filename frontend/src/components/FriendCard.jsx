@@ -10,7 +10,22 @@ const FriendCard = ({ friend }) => {
           <div className="avatar size-12">
             <img src={friend.profilePic} alt={friend.fullName} />
           </div>
-          <h3 className="font-semibold truncate">{friend.fullName}</h3>
+          <div>
+            <h3 className="font-semibold truncate">{friend.fullName}</h3>
+            {/* {friend.location && (
+              <div className="flex items-center text-xs opacity-70 mt-1">
+                <span className="material-icons text-base mr-1">location_on</span>
+                {friend.location}
+              </div>
+            )} */}
+            {friend.bio && (
+              <p className="text-xs opacity-70 mt-1">Bio : {friend.bio}</p>
+            )}
+
+            {friend.location && (
+              <p className="text-xs opacity-70 mt-1">Location :{friend.location}</p>
+            )}
+          </div>
         </div>
 
         <Link to={`/chat/${friend._id}`} className="btn btn-outline w-full">
