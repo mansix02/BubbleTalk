@@ -23,7 +23,7 @@ const FriendCard = ({ friend }) => {
             )}
 
             {friend.location && (
-              <p className="text-xs opacity-70 mt-1">Location :{friend.location}</p>
+              <p className="text-xs opacity-70 mt-1">Location : {friend.location}</p>
             )}
           </div>
         </div>

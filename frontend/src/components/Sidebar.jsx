@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 import useAuthUser from "../hooks/useAuthUser";
-import { BellIcon, HomeIcon, ShipWheelIcon, UsersIcon } from "lucide-react";
+import { BellIcon, HomeIcon, ShipWheelIcon, UsersIcon, MessageCircleIcon } from "lucide-react";
 
 const Sidebar = ({ onClose }) => {
   const { authUser } = useAuthUser();
@@ -16,7 +16,7 @@ const Sidebar = ({ onClose }) => {
     <aside className="w-64 bg-base-200 border-r border-base-300 flex flex-col h-screen sticky top-0">
       <div className="p-5 border-b border-base-300">
         <Link to="/" className="flex items-center gap-2.5" onClick={handleNav}>
-          <ShipWheelIcon className="size-9 text-primary" />
+          <MessageCircleIcon className="size-9 text-primary" />
           <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary  tracking-wider">
             BubbleTalk
           </span>
@@ -53,7 +53,7 @@ const Sidebar = ({ onClose }) => {
           }`}
           onClick={handleNav}
         >
-          <UsersIcon className="size-5 text-base-content opacity-70" />
+          <MessageCircleIcon className="size-5 text-base-content opacity-70" />
           <span>Chats</span>
         </Link>
 
